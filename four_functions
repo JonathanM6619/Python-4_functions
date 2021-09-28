@@ -1,0 +1,59 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Sep 27 10:45:51 2021
+
+@author: jm854
+"""
+print("")
+print(" ")
+print(" 1. ")
+
+price = float(input("What is your price: "))
+tax = int(price) * .08
+total = price + tax
+print("Your total is:  ", total)
+
+print("")
+print(" ")
+print(" 2. ")
+
+bill_price = float(input("Enter your price: "))
+food_quality = (input("How was the food?(good, fair, bad): "))
+
+if food_quality == "good":
+    tip = bill_price * 0.20
+    total = tip + bill_price
+    print("Your total with a 20% tip is: ", total)
+    
+if food_quality == "fair":
+    tip = bill_price * 0.15
+    total = tip + bill_price
+    print("Your total with a 15% tip is: ", total)
+    
+if food_quality == "bad":
+    tip = bill_price * 0.10
+    total = tip + bill_price
+    print("Your total with a 10% tip is: ", total)
+    
+    
+    
+print("")
+print(" ")
+print(" 3. ")
+
+def getRemainder(slices, eaters):
+    return(slices - eaters * (slices // eaters))
+
+slices = float(input("How many slices are there?: "))
+eaters = float(input("How many eaters are there?: "))
+
+slices_per_eater = slices / eaters
+print("Each eater can eat {:.0f}".format(slices_per_eater))
+print("There will be a remainder of: ", getRemainder(slices, eaters))
+
+print("")
+print(" ")
+print(" 4. ")
+print("Thank you for checking my code!")
+
+
